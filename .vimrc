@@ -298,16 +298,22 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-"" PYTHO
+"" PYTHON
 "python with virtualenv support
-""py << EOF
-""import os
-""import sys
-""if 'VIRTUAL_ENV' in os.environ:
-""  project_base_dir = os.environ['VIRTUAL_ENV']
-""  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-""  execfile(activate_this, dict(__file__=activate_this))
-""EOF
+python3 << EOF
+import os
+import subprocess
+
+if "VIRTUAL_ENV" in os.environ:
+    project_base_dir = os.environ["VIRTUAL_ENV"]
+    script = os.path.join(project_base_dir, "bin/activate")
+    pipe = subprocess.Popen(". %s; env" % script, stdout=subprocess.PIPE, shell=True)
+    output = pipe.communicate()[0].decode('utf8').splitlines()
+    env = dict((line.split("=", 1) for line in output))
+    os.environ.update(env)
+
+EOF
+
 
 let python_highlight_all=1
 syntax on
