@@ -1,3 +1,8 @@
+"" SOURCES
+" https://www.atlassian.com/git/tutorials/dotfiles
+" https://www.programiz.com/python-programming/file-operation
+" see 00-99/20-29_IT/25_Backup
+
 language en_US
 
 " Disable compatibility with vi which can cause unexpected issues.
