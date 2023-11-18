@@ -119,7 +119,6 @@ compinit
 # ALIASES
 alias cat='bat -p'
 alias lst="exa -T"
-alias sshrem="/opt/homebrew/bin/sshpass -p BrtxRSEvaa ssh root@192.168.2.111"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
