@@ -9,6 +9,7 @@ language en_US
 set nocompatible
 
 set encoding=utf-8
+set fileencoding=utf-8
 
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype off "off for vundle 
@@ -110,7 +111,9 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-fugitive'
     Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-    
+    Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
+
     " add all your plugins here (note older versions of Vundle
     " used Bundle instead of Plugin)
     
@@ -330,8 +333,8 @@ au BufNewFile,BufRead *.py
 
 " WEB
 au BufNewFile,BufRead *.js,*.html,*.css
-    \ set tabstop=2
-    \ set softtabstop=2
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
     \ set shiftwidth=2
 
 
@@ -345,4 +348,14 @@ endif
 "" NERDTree
  "ignore files in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$']
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
