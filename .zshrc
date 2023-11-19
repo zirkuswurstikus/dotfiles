@@ -132,3 +132,6 @@ export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
 
 source "$HOME/.zsh/spaceship/spaceship.zsh"
 alias config='/usr/bin/git --git-dir=/Users/christian/.cfg/ --work-tree=/Users/christian'
+
+alias p='python3'
+alias pm='python3 manage.py'
