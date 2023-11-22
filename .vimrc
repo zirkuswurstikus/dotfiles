@@ -24,7 +24,8 @@ filetype indent on
 syntax on
 
 " Add numbers to each line on the left-hand side.
-set number
+" Use hybrid numbers
+set number relativenumber
 
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
