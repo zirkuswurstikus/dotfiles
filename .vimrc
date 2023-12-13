@@ -3,6 +3,11 @@
 " https://www.programiz.com/python-programming/file-operation
 " see 00-99/20-29_IT/25_Backup
 
+" SOURCE
+source ~/./.vim/plugins.vim
+
+""""""""""""""
+
 language en_US
 
 " Disable compatibility with vi which can cause unexpected issues.
@@ -88,40 +93,6 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-" PLUGINS ---------------------------------------------------------------- {{{
-    " Manage vundle plugins
-    " set the runtime path to include Vundle and initialize
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
-    
-    " alternatively, pass a path where Vundle should install plugins
-    "call vundle#begin('~/some/path/here')
-    
-    " let Vundle manage Vundle, required
-    Plugin 'gmarik/Vundle.vim'
-    Plugin 'tmhedberg/SimpylFold'
-    Plugin 'vim-scripts/indentpython.vim'
-    Bundle 'Valloric/YouCompleteMe' 
-    " ~/.vim/bundle/YouCompleteMe/install.py
-    Plugin 'vim-syntastic/syntastic'
-    Plugin 'nvie/vim-flake8'
-    Plugin 'jnurmine/Zenburn'
-    Plugin 'altercation/vim-colors-solarized'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'jistr/vim-nerdtree-tabs'
-    Plugin 'kien/ctrlp.vim'
-    Plugin 'tpope/vim-fugitive'
-    Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-    Plugin 'SirVer/ultisnips'
-    Plugin 'honza/vim-snippets'
-
-    " add all your plugins here (note older versions of Vundle
-    " used Bundle instead of Plugin)
-    
-    " ...
-    
-    " All of your Plugins must be added before the following line
-    call vundle#end()            " required
     filetype plugin indent on    " required
     
     """ Bootstrap vim-plug
